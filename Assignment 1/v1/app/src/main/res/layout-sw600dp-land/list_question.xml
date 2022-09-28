@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_centerVertical="false"
+    app:chainUseRtl="false">
+
+
+    <LinearLayout
+        android:id="@+id/textBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#F6F0B6"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Q1"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/textBox"
+            app:layout_constraintRight_toRightOf="@id/textBox" />
+
+        <TextView
+            android:id="@+id/pointsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Point: 0"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/textBox"
+            app:layout_constraintRight_toRightOf="@id/textBox"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/penaltyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penalty: 0"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/textBox"
+            app:layout_constraintRight_toRightOf="@id/textBox"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

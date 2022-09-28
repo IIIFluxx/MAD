@@ -1,0 +1,5 @@
+Assumptions:
+	- City name has no effect on game - just aesthetic
+	- Settings have restrictions on how many digits/letters can be put in by user (e.g. Map W/H, Initial money has a set limit - you can only assign so much money).
+	
+These assumptions are made from the Specification and how I prefer my game to flow (whilst still abiding by the spec).

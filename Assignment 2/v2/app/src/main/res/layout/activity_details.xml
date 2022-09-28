@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+Reference for Icons: Icons from www.flaticon.com made by Freepik.
+    Blueprint icon: https://www.flaticon.com/free-icon/blueprint_1041010
+    Save icon: https://www.flaticon.com/free-icon/save_114312
+    Camera icon: https://www.flaticon.com/free-icon/camera_1042339
+-->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/structureImg"
+        android:text="Details"
+        android:textSize="40sp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:textStyle="bold|italic"
+        app:srcCompat="@drawable/levels" />
+    <!--         android:textColor="@color/cardview_dark_background" -->
+
+
+    <ImageView
+        android:id="@+id/structureImg"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="32dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt"
+        app:layout_constraintBottom_toTopOf="@id/layoutBox"
+        app:srcCompat="@drawable/camera" />
+
+    <LinearLayout
+        android:id="@+id/layoutBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/structureImg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saveImg"
+        android:layout_marginLeft="32dp">
+
+        <TextView
+            android:id="@+id/nameLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C2CAD0"
+            android:ems="15"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Name: "
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C2CAD0"
+            android:ems="15"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text=""
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/typeLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Structure type: "
+            android:fontFamily="@font/ubuntu_medium"
+            android:textStyle="italic"
+            android:background="#C2CAD0"/>
+
+        <TextView
+            android:id="@+id/locLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="Location: "
+            android:fontFamily="@font/ubuntu_medium"
+            android:textStyle="italic"
+            android:background="#C2CAD0"/>
+
+        <TextView
+            android:id="@+id/coordLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="X, Y"
+            android:textSize="20sp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:paddingLeft="20dp"
+            android:textStyle="italic"
+            android:background="#C2CAD0"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/saveImg"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/save"
+        />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/layoutBox"
+        app:layout_constraintLeft_toRightOf="@id/saveImg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

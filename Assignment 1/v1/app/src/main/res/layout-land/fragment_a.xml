@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".FragmentA">
+
+    <!-- TODO: ? -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DD9393"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/oneColumnIcon"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:contentDescription="oneColumnIcon"
+            android:src="@drawable/numeric1box"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/twoColumnIcon"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="twoColumnIcon"
+            android:src="@drawable/numeric2box"
+            app:layout_constraintLeft_toRightOf="@id/oneColumnIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/threeColumnIcon"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="threeColumnIcon"
+            android:src="@drawable/numeric3box"
+            app:layout_constraintLeft_toRightOf="@id/twoColumnIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/arrowIcon"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:contentDescription="arrowIcon"
+            android:src="@drawable/arrowrightbox"
+            android:tag="right"
+            app:layout_constraintLeft_toRightOf="@id/threeColumnIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

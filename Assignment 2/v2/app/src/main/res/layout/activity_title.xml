@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+Reference for Icons: Icons from www.flaticon.com made by Freepik.
+    Island Builder Logo: https://www.flaticon.com/free-icon/island_3038992?term=island&page=1&position=68
+    Play logo: https://www.flaticon.com/free-icon/play-button_2468825?term=play&page=1&position=85
+    Settings icon: https://www.flaticon.com/free-icon/levels_194562?term=red%20options&page=1&position=61
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CACACA"
+    tools:context=".TitleActivity">
+
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:src="@drawable/island"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nameText"
+        />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bharath Sukesh - 19982634"
+        android:textStyle="bold"
+        app:fontFamily="@font/allerta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImg"
+        app:layout_constraintBottom_toTopOf="@id/playImg"
+        />
+
+    <ImageView
+        android:id="@+id/playImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameText"
+        app:layout_constraintBottom_toTopOf="@id/settingsImg"
+        app:srcCompat="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/settingsImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playImg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/levels" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

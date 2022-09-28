@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+Reference for Icons: Icons from www.flaticon.com.
+    Demolish/Bulldozer icon made by Smashicons:
+        https://www.flaticon.com/free-icon/demolishing_226562?term=demolish&page=1&position=25
+    Information icon made by mavadee:
+        https://www.flaticon.com/free-icon/information_3448577?term=information&page=1&position=49
+    Clock icon made by Freepik:
+        https://www.flaticon.com/free-icon/clock_3564808?term=time%20pass&page=1&position=35
+    Build icon made by Freepik:
+        https://www.flaticon.com/free-icon/build_603883
+-->
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".TaskbarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5CDB95">
+
+        <LinearLayout
+            android:id="@+id/taskbar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Time: "
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/balanceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Balance: "
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/incomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Income: "
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/populationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Population: "
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/taskbar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/taskbar1"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/empRateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Employment Rate: "
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/cityNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="City: "
+                android:ems="10"
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tempText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Temperature: "
+                android:textColor="@android:color/secondary_text_light"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/demolishImg"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/taskbar2"
+            app:layout_constraintBottom_toTopOf="@id/buildImg"
+            app:layout_constraintRight_toLeftOf="@id/clockImg"
+            app:srcCompat="@drawable/demolish"
+            />
+
+        <ImageView
+            android:id="@+id/infoImg"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintLeft_toRightOf="@id/demolishImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/clockImg"
+            app:srcCompat="@drawable/information"
+            />
+
+        <ImageView
+            android:id="@+id/buildImg"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toBottomOf="@id/demolishImg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/clockImg"
+            app:layout_constraintLeft_toRightOf="@id/taskbar2"
+            app:srcCompat="@drawable/build" />
+
+        <ImageView
+            android:id="@+id/clockImg"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintLeft_toRightOf="@id/buildImg"
+            app:layout_constraintTop_toBottomOf="@id/infoImg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/clock"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

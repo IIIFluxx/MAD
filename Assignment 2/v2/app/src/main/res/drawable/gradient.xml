@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Reference: Code is from
+    https://stackoverflow.com/questions/7441857/how-to-make-a-gradient-background-for-a-linearlayout
+Colour is custom :)
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#d1246c"
+        android:endColor="#413494"
+        android:angle="90" />
+</shape>
